@@ -2,7 +2,7 @@
 
 const gulp         = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
-const browserSync  = require('browser-sync');
+const browserSync  = require('browser-sync').create();
 const sass         = require('gulp-sass');
 const sassGlob     = require('gulp-sass-glob');
 const scssLint     = require('gulp-scss-lint');
