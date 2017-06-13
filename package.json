@@ -1,0 +1,15 @@
+{
+  "name": "PressLess",
+  "version": "0.1.0",
+  "description": "WordPress theme without WordPress, based on the WordPress REST API.",
+  "repository": "https://github.com/sboerrigter/pressless.git",
+  "author": "Sjoerd Boerrigter <sjoerd@trendwerk.nl>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8"
+  },
+  "dependencies": {}
+}
