@@ -5,7 +5,7 @@ $green-extra-light: #cee;
 $green-light:       #9cc;
 $green:             #699;
 $green-dark:        #366;
-$green-extra-dark:  #000;
+$green-extra-dark:  #033;
 
 $red-extra-light:   #fee;
 $red-light:         #f99;
@@ -14,10 +14,18 @@ $red-dark:          #c33;
 $red-extra-dark:    #900;
 
 $white:             #fff;
+$grey-extra-light:  #eee;
+$grey-light:        #ccc;
+$grey:              #999;
+$grey-dark:         #666;
+$grey-extra-dark:   #333;
 $black:             #000;
 
 /**
  * Color implementation
  */
-$heading-color:     $green-extra-dark;
-$text-color:        $green-extra-dark;
+$heading-color:     $black;
+$text-color:        $black;
+
+$link-color:        $green;
+$link-hover:        $green-dark;
