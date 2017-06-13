@@ -1,9 +1,9 @@
 'use strict';
 
 const gulp = require('gulp');
-const sassGlob = require('gulp-sass-glob');
-const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
 const scssLint = require('gulp-scss-lint');
 
 gulp.task('scssLint', () => {
