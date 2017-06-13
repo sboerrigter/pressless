@@ -16,7 +16,7 @@ gulp.task('scssLint', () => {
 gulp.task('sass', () => {
   gulp.src('assets/styles/main.scss')
     .pipe(sassGlob())
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer())
     .pipe(gulp.dest('public'));
 });
