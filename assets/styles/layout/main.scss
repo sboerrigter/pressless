@@ -1,7 +1,3 @@
 .main {
   @include container();
-
-  .wrapper {
-    max-width: $content-width;
-  }
 }
