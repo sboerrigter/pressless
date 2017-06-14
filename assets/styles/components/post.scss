@@ -1,5 +1,16 @@
 .post {
-  float: left;
-  margin: 1.5%;
-  width: 30%;
+  @include full-width();
+  margin-right: 20px;
+
+  @include breakpoint('medium') {
+    width: calc(50% - 20px);
+  }
+
+  @include breakpoint('large') {
+    width: 33%;
+  }
+
+  &__image {
+    width: 100%;
+  }
 }

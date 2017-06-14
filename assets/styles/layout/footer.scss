@@ -1,5 +1,4 @@
 .footer {
-  @include container();
   background: $footer-background;
   padding-bottom: 1.5em;
   padding-top: 1.5em;
@@ -10,13 +9,10 @@
     padding-top: 2em;
   }
 
+  a,
   p {
     color: $white;
     font-size: $text-small;
     margin: 0;
-  }
-
-  a {
-    color: $white;
   }
 }
