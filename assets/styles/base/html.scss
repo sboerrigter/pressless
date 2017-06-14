@@ -1,7 +1,10 @@
 html {
   box-sizing: border-box;
-  font-size: 1.125em;
   -webkit-font-smoothing: antialiased;
+
+  @include breakpoint('medium') {
+    font-size: 1.125em;
+  }
 }
 
 *::before,
