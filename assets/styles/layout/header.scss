@@ -1,11 +1,10 @@
 .header {
   @include container();
+  @include margin-bottom();
   padding-bottom: 1em;
   padding-top: 1em;
-  margin-bottom: $margin-bottom;
 
   @include breakpoint('large') {
-    margin-bottom: $margin-bottom-large;
     padding-bottom: 2em;
     padding-top: 2em;
   }

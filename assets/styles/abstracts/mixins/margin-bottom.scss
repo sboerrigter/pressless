@@ -1,0 +1,11 @@
+@mixin margin-bottom($margin: $default-margin) {
+  margin-bottom: $margin;
+
+  @include breakpoint('medium') {
+    margin-bottom: #{$margin * 1.5};
+  }
+
+  @include breakpoint('large') {
+    margin-bottom: #{$margin * 2};
+  }
+}
