@@ -1,4 +1,8 @@
 .intro {
   @include center($content-width);
   @include margin-bottom();
+
+  &__content {
+    font-size: $h3-size;
+  }
 }
