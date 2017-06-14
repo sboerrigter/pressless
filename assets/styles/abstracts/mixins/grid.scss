@@ -1,0 +1,22 @@
+@mixin grid($columns, $margin: 20px) {
+
+  @media (max-width: (map-get($breakpoints, 'small') - 1)) {
+    @include column(round($columns / 5), $margin);
+  }
+
+  @media (min-width: map-get($breakpoints, 'small')) and (max-width: (map-get($breakpoints, 'medium') - 1)) {
+    @include column(round($columns / 5 * 2), $margin);
+  }
+
+  @media (min-width: map-get($breakpoints, 'medium')) and (max-width: (map-get($breakpoints, 'large') - 1)) {
+    @include column(round($columns / 5 * 3), $margin);
+  }
+
+  @media (min-width: map-get($breakpoints, 'large')) and (max-width: (map-get($breakpoints, 'xlarge') - 1)) {
+    @include column(round($columns / 5 * 4), $margin);
+  }
+
+  @media (min-width: map-get($breakpoints, 'xlarge')) {
+    @include column($columns, $margin);
+  }
+}

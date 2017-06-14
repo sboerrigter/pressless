@@ -1,14 +1,6 @@
 .post {
-  @include full-width();
-  margin-right: 20px;
-
-  @include breakpoint('medium') {
-    width: calc(50% - 20px);
-  }
-
-  @include breakpoint('large') {
-    width: 33%;
-  }
+  @include grid(3, 40px);
+  @include margin-bottom(40px);
 
   &__image {
     width: 100%;

@@ -9,10 +9,13 @@
     padding-top: 2em;
   }
 
-  a,
   p {
     color: $white;
     font-size: $text-small;
     margin: 0;
+  }
+
+  a {
+    color: $green-light;
   }
 }

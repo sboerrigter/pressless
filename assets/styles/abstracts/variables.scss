@@ -66,3 +66,12 @@ $link-hover:          $green-dark;
 $wrapper-width:       1440px;
 $content-width:       840px;
 $default-margin:      60px;
+
+$breakpoints: (
+  'xsmall': 360px,
+  'small': 480px,
+  'medium': 640px,
+  'large': 960px,
+  'xlarge': 1200px,
+  'full': $wrapper-width
+);

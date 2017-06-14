@@ -2,14 +2,18 @@
 
   $breakpoint: $size;
 
-  @if $size == 'small' {
-    $breakpoint: 480px;
+  @if $size == 'xsmall' {
+    $breakpoint: map-get($breakpoints, 'xsmall');
+  } @else if $size == 'small' {
+    $breakpoint: map-get($breakpoints, 'small');
   } @else if $size == 'medium' {
-    $breakpoint: 640px;
+    $breakpoint: map-get($breakpoints, 'medium');
   } @else if $size == 'large' {
-    $breakpoint: 960px;
+    $breakpoint: map-get($breakpoints, 'large');
+  } @else if $size == 'xlarge' {
+    $breakpoint: map-get($breakpoints, 'xlarge');
   } @else if $size == 'full' {
-    $breakpoint: $wrapper-width;
+    $breakpoint: map-get($breakpoints, 'full');
   }
 
   @media (min-width: $breakpoint) {
