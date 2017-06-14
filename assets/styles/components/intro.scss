@@ -1,0 +1,7 @@
+.intro {
+  margin-bottom: $margin-bottom;
+
+  @include breakpoint('medium') {
+    margin-bottom: $margin-bottom-large;
+  }
+}
