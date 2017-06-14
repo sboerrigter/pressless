@@ -35,9 +35,7 @@ gulp.task('reload', function() {
   browserSync.reload();
 });
 
-gulp.task('default', () => {
-  gulp.run('serve');
-
+gulp.task('watch', ['serve'], () => {
   gulp.watch(stylesDir + '/**/*.scss', ['scssLint', 'sass', 'reload']);
   gulp.watch(publicDir + '/**/*.html', ['reload']);
 });
