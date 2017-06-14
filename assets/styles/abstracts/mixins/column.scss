@@ -12,4 +12,8 @@
   &:nth-child(#{$columns}n+#{$columns + 1}) {
     clear: left;
   }
+
+  &:nth-last-child(-n+#{$columns}) {
+    margin-bottom: 0;
+  }
 }
