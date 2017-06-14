@@ -1,5 +1,22 @@
 .footer {
   @include container();
-  background: $green-extra-dark;
-  color: $white;
+  background: $footer-background;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+  text-align: center;
+
+  @include breakpoint('large') {
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
+
+  p {
+    color: $white;
+    font-size: $text-small;
+    margin: 0;
+  }
+
+  a {
+    color: $white;
+  }
 }

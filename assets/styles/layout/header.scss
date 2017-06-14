@@ -1,6 +1,7 @@
 .header {
   @include container();
   @include margin-bottom();
+  background: $header-background;
   padding-bottom: 1em;
   padding-top: 1em;
 
