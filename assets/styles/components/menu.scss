@@ -3,7 +3,7 @@
   display: none;
   margin: 1rem 0;
 
-  @media (min-width: $breakpoint-medium) {
+  @include breakpoint('large') {
     display: block;
     float: right;
     margin: 0;
@@ -17,7 +17,7 @@
     font-weight: $heading-weight;
     text-transform: uppercase;
 
-    @media (min-width: $breakpoint-medium) {
+    @include breakpoint('large') {
       color: $heading-color;
       margin-left: 2rem;
       width: auto;

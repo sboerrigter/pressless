@@ -1,0 +1,20 @@
+@mixin breakpoint($size) {
+
+  $breakpoint: $size;
+
+  @if $size == 'small' {
+    $breakpoint: 480px;
+  } @else if $size == 'smedium' {
+    $breakpoint: 640px;
+  } @else if $size == 'medium' {
+    $breakpoint: 960px;
+  } @else if $size == 'large' {
+    $breakpoint: 1200px;
+  } @else if $size == 'full' {
+    $breakpoint: $wrapper-width;
+  }
+
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
