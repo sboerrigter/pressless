@@ -1,0 +1,14 @@
+@mixin container() {
+  @include full-width();
+  padding: 0 20px;
+
+  @media(min-width: $breakpoint-small) {
+    padding: 0 40px;
+  }
+
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $wrapper-width;
+  }
+}

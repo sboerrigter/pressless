@@ -12,8 +12,8 @@
     </head>
 
     <body>
-        <header>
-          <section class="header">
+        <header class="header">
+          <div class="wrapper">
             <a class="logo" href="#">PressLess</a>
 
             <nav class="menu">
@@ -22,21 +22,23 @@
               <a class="menu__item" href="#">About</a>
               <a class="menu__item" href="#">Contact</a>
             </nav>
-          </section>
+          </div>
         </header>
 
-        <main>
-          <section class="intro">
+        <main class="main">
+          <div class="wrapper">
             <h1 class="intro__title">WordPress theme. Without WordPress.</h1>
 
             <p class="intro__content">PressLess is a WordPress theme without WordPress. It uses vue.js to load posts and pages from WordPress via the WordPress REST API. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</p>
 
             <p>
-              <a class="intro__link" href="#">Read more</a>
+              <a class="intro__link button" href="#">Read more</a>
             </p>
-          </section>
+          </div>
+        </main>
 
-          <section class="posts">
+        <section class="posts">
+          <div class="wrapper">
             <article class="post">
               <img class="post__image" src="https://source.unsplash.com/480x360/?sig=1">
 
@@ -109,15 +111,14 @@
                 <a class="post__link" href="#">Read more</a>
               </p>
             </article>
-          </section>
-        </main>
+          </div>
+      </main>
 
-        <footer>
-          <section class="credits">
-            <p class="">
-              PressLess is made with &hearts; by <a href="https://github.com/sboerrigter" target="_blank">Sjoerd Boerrigter</a>, to become a better webdeveloper :-)
-            </p>
-          </section>
-        </footer>
+      <footer class="footer">
+        <div class="wrapper">
+          <p class="credits">
+            PressLess is made with &hearts; by <a href="https://github.com/sboerrigter" target="_blank">Sjoerd Boerrigter</a>, to become a better webdeveloper :-)
+          </p>
+      </footer>
     </body>
 </html>
