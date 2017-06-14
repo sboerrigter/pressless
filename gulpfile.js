@@ -20,7 +20,7 @@ gulp.task('scssLint', () => {
 gulp.task('sass', () => {
   gulp.src(stylesDir + '/main.scss')
     .pipe(sassGlob())
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(publicDir))
 });
