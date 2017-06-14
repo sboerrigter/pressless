@@ -1,0 +1,12 @@
+.logo {
+  color: $heading-color;
+  font-family: $text-font;
+  font-size: $h3-size;
+  font-weight: $text-weight-bold;
+  float: left;
+
+  &:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+}

@@ -17,7 +17,7 @@ gulp.task('scssLint', () => {
     }));
 });
 
-gulp.task('sass', () => {
+gulp.task('sass', ['scssLint'], () => {
   gulp.src(stylesDir + '/main.scss')
     .pipe(sassGlob())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -31,7 +31,7 @@ gulp.task('serve', function() {
   });
 });
 
-gulp.task('reload', function() {
+gulp.task('reload', ['sass'], function() {
   browserSync.reload();
 });
 

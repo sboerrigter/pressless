@@ -1,0 +1,26 @@
+.menu {
+  @include full-width();
+  display: none;
+  margin: 1rem 0;
+
+  @media (min-width: $breakpoint-medium) {
+    display: block;
+    float: right;
+    margin: 0;
+    width: auto;
+  }
+
+  &__item {
+    @include full-width();
+    color: $heading-color;
+    font-family: $heading-font;
+    font-weight: $heading-weight;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint-medium) {
+      color: $heading-color;
+      margin-left: 2rem;
+      width: auto;
+    }
+  }
+}
