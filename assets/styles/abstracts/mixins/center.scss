@@ -1,0 +1,6 @@
+@mixin center($width: $wrapper-width) {
+  float: none;
+  margin: 0 auto;
+  max-width: $width;
+  width: 100%;
+}
