@@ -2,5 +2,7 @@ body {
   color: $text-color;
   font-family: $text-font;
   font-size: $text-size;
+  font-weight: $text-weight;
   line-height: $line-height;
+  word-wrap: break-word;
 }

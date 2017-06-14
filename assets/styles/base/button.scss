@@ -1,0 +1,20 @@
+.button {
+  background: $primary-color;
+  color: $white;
+  display: inline-block;
+  font-family: $heading-font;
+  font-size: $text-small;
+  line-height: $line-height-medium;
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $primary-hover;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &.large {
+    font-size: $text-size;
+  }
+}

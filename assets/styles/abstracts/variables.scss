@@ -1,63 +1,66 @@
 /**
  * Colors
  */
-$green-extra-light: #cee;
-$green-light:       #9cc;
-$green:             #699;
-$green-dark:        #366;
-$green-extra-dark:  #033;
+$green-extra-light:   #cee;
+$green-light:         #9cc;
+$green:               #699;
+$green-dark:          #366;
+$green-extra-dark:    #033;
 
-$red-extra-light:   #fee;
-$red-light:         #f99;
-$red:               #f66;
-$red-dark:          #c33;
-$red-extra-dark:    #900;
+$red-extra-light:     #fee;
+$red-light:           #f99;
+$red:                 #f66;
+$red-dark:            #c33;
+$red-extra-dark:      #900;
 
-$white:             #fff;
-$grey-extra-light:  #eee;
-$grey-light:        #ccc;
-$grey:              #999;
-$grey-dark:         #666;
-$grey-extra-dark:   #333;
-$black:             #000;
+$white:               #fff;
+$grey-extra-light:    #eee;
+$grey-light:          #ccc;
+$grey:                #999;
+$grey-dark:           #666;
+$grey-extra-dark:     #333;
+$black:               #000;
 
 /**
  * Color implementation
  */
-$primary-color:     $red-light;
-$primary-hover:     $red;
-$secondary-color:   $green;
-$secondary-hover:   $green-dark;
+$primary-color:       $green;
+$primary-hover:       $green-dark;
+$secondary-color:     $red;
+$secondary-hover:     $green-dark;
 
 /**
  * Typography
  */
-$text-font:         ('Martel', serif);
-$text-color:        $black;
-$text-size:         1.5em;
-$text-small:        1.25em;
+$text-font:           ('Martel', serif);
+$text-color:          $black;
+$text-size:           1rem;
+$text-small:          0.833rem;
+$text-weight:         300;
 
-$heading-font:      ('Roboto condensed', sans-serif);
-$heading-color:     $black;
-$h1-size:           3em;
-$h2-size:           2em;
-$h3-size:           1.75em;
-$h4-size:           1.5em;
-$h5-size:           1.25em;
-$h6-size:           1.25em;
+$heading-font:        ('Roboto condensed', sans-serif);
+$heading-color:       $black;
+$heading-weight:      700;
+$h1-size:             2rem;
+$h2-size:             1.333rem;
+$h3-size:             1.222rem;
+$h4-size:             1.111rem;
+$h5-size:             1rem;
+$h6-size:             1rem;
 
-$link-color:        $green;
-$link-hover:        $green-dark;
+$link-color:          $green;
+$link-hover:          $green-dark;
 
-$line-height:       2;
-$line-height-small: 1;
+$line-height:         2em;
+$line-height-medium:  1.5em;
+$line-height-small:   1em;
 
 /**
  * Dimensions
  */
-$wrapper-width:     1200px;
-$content-width:     840px;
+$wrapper-width:       1200px;
+$content-width:       840px;
 
-$breakpoint-large:  1200px;
-$breakpoint-medium: 900px;
-$breakpoint-small:  600px;
+$breakpoint-large:    1200px;
+$breakpoint-medium:   900px;
+$breakpoint-small:    600px;
