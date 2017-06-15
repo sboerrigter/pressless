@@ -29,22 +29,25 @@ $primary-hover:       $green-dark;
 $secondary-color:     $red;
 $secondary-hover:     $green-dark;
 
+$text-color:          $black;
+$heading-color:       $black;
+$link-color:          $primary-color;
+$link-hover:          $primary-hover;
+
 $header-background:   $white;
 $body-background:     $white;
+$light-background:    $green-extra-light;
 $footer-background:   $green-extra-dark;
 
 /**
  * Typography
  */
 $text-font:           ('Martel', serif);
-$text-color:          $black;
+$text-weight:         300;
 $text-size:           1rem;
 $text-small:          0.9rem;
-$text-weight:         300;
-$text-weight-bold:    900;
 
 $heading-font:        ('Roboto condensed', sans-serif);
-$heading-color:       $black;
 $heading-weight:      700;
 $h1-size:             4rem;
 $h2-size:             2rem;
@@ -57,9 +60,6 @@ $line-height:         2em;
 $line-height-medium:  1.5em;
 $line-height-small:   1em;
 
-$link-color:          $green;
-$link-hover:          $green-dark;
-
 /**
  * Dimensions
  */
@@ -67,6 +67,9 @@ $wrapper-width:       1440px;
 $content-width:       840px;
 $default-margin:      60px;
 
+/**
+ * Breakpoints
+ */
 $breakpoints: (
   'xsmall': 360px,
   'small': 480px,
