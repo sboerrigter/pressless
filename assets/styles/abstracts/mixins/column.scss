@@ -1,9 +1,9 @@
 @mixin column($columns, $margin: 20px) {
-  $spacing: ($margin * ($columns - 1));
+  $total-margin: ($margin * ($columns - 1));
 
   float: left;
   margin-right: $margin;
-  width: calc(#{100 / $columns}% - #{$spacing / $columns});
+  width: calc(#{100 / $columns}% - #{$total-margin / $columns});
 
   &:nth-child(#{$columns}n) {
     margin-right: 0;
@@ -13,6 +13,7 @@
     clear: left;
   }
 
+  // Remove bottom margin from elements in last row
   &:nth-last-child(-n+#{$columns}) {
     margin-bottom: 0;
   }
