@@ -1,5 +1,4 @@
 @mixin grid($columns, $margin: 20px) {
-
   @media (max-width: (map-get($breakpoints, 'small') - 1)) {
     @include column(round($columns / 5), $margin);
   }
