@@ -1,0 +1,31 @@
+.hamburger {
+  cursor: pointer;
+  float: right;
+  height: 20px;
+  margin: 6px 0;
+  position: relative;
+  width: 20px;
+
+  @include breakpoint('large') {
+    display: none;
+  }
+
+  &__line {
+    background: $black;
+    height: 2px;
+    position: absolute;
+    width: 20px;
+
+    &:first-child {
+      top: 3px;
+    }
+
+    &:nth-child(2) {
+      top: 9px;
+    }
+
+    &:nth-child(3) {
+      top: 15px;
+    }
+  }
+}
