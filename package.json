@@ -15,10 +15,11 @@
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
     "gulp-scss-lint": "^0.4.0",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-stream": "^3.2.0"
   },
   "scripts": {
-    "postinstall": "gulp watch"
+    "postinstall": "gulp"
   },
   "dependencies": {
     "vue": "^2.3.4"
