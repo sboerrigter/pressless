@@ -16,7 +16,7 @@ gulp.task('js', () => {
   gulp.src(scriptsDir + 'main.js')
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest(publicDir))
-
+    .pipe(browserSync.stream());
 });
 
 gulp.task('scssLint', () => {
@@ -32,20 +32,19 @@ gulp.task('sass', ['scssLint'], () => {
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(publicDir))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('serve', function() {
-  browserSync.init({
-    server: publicDir,
-  });
-});
-
-gulp.task('reload', ['js', 'scssLint', 'sass'], function() {
+gulp.task('reload', () => {
   browserSync.reload();
 });
 
-gulp.task('default', ['serve'], () => {
-  gulp.watch(scriptsDir + '**/*.js', ['js', 'reload']);
-  gulp.watch(stylesDir + '**/*.scss', ['scssLint', 'sass', 'reload']);
+gulp.task('default', ['sass'], () => {
+  browserSync.init({
+    server: publicDir,
+  });
+
+  gulp.watch(scriptsDir + '**/*.js', ['js']);
+  gulp.watch(stylesDir + '**/*.scss', ['scssLint', 'sass']);
   gulp.watch(publicDir + '**/*.html', ['reload']);
 });
