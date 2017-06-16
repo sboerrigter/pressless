@@ -22,5 +22,11 @@ module.exports = {
         comments: false
       }
     }),
-  ]
+  ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
+  watch: false
 }
