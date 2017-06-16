@@ -11,9 +11,13 @@
     "gulp-autoprefixer": "^4.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
-    "gulp-scss-lint": "^0.4.0"
+    "gulp-scss-lint": "^0.4.0",
+    "webpack": "^2.6.1"
   },
   "scripts": {
     "postinstall": "gulp watch"
+  },
+  "dependencies": {
+    "vue": "^2.3.4"
   }
 }
