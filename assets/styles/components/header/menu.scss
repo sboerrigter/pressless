@@ -18,13 +18,24 @@
     text-transform: uppercase;
 
     @include breakpoint('large') {
-      color: $heading-color;
       margin-left: 2rem;
       width: auto;
     }
 
     &:hover {
       text-decoration: none;
+    }
+  }
+
+  .open & {
+    display: block;
+
+    &__item {
+      color: $white;
+
+      &:hover {
+        color: $green-light;
+      }
     }
   }
 }

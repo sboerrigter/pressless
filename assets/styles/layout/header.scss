@@ -8,4 +8,8 @@
     padding-bottom: 2em;
     padding-top: 2em;
   }
+
+  &.open {
+    background: $menu-background;
+  }
 }

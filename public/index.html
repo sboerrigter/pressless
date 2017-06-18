@@ -13,18 +13,19 @@
   </head>
 
   <body>
-    <header class="header container">
+    <header class="header container" :class="{ 'open': isOpen }">
       <div class="wrapper">
         <a class="logo" href="#">{{ sitename }}</a>
 
-        <div class="hamburger">
+        <div class="hamburger" @click="toggleMenu">
+          <div class="hamburger__line"></div>
           <div class="hamburger__line"></div>
           <div class="hamburger__line"></div>
           <div class="hamburger__line"></div>
         </div>
 
         <nav class="menu">
-          <a class="menu__item" href="#" v-for="item in menu">{{ item }}</a>
+          <a class="menu__item" :href="item.link" v-for="item in menu">{{ item.label }}</a>
         </nav>
       </div>
     </header>

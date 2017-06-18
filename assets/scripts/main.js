@@ -4,6 +4,33 @@ let header = new Vue({
   el: '.header',
   data: {
     sitename: 'PressLess',
-    menu: ['Home', 'Blog', 'About', 'Contact']
+    isOpen: false,
+    menu: [
+      {
+        label: 'Home',
+        link: '#'
+      },
+      {
+        label: 'Blog',
+        link: '#'
+      },
+      {
+        label: 'About',
+        link: '#'
+      },
+      {
+        label: 'Contact',
+        link: '#'
+      }
+    ],
+  },
+  methods: {
+    toggleMenu() {
+      if (this.isOpen) {
+        this.isOpen = false;
+      } else {
+        this.isOpen = true;
+      }
+    }
   }
 });
