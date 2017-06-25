@@ -7,13 +7,17 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js/,
+        test: /\.js$/,
         loader: 'babel-loader',
         query: {
           compact: true,
           presets: ['es2015']
         }
-      }
+      },
+      {
+        test: /\.js$/,
+        loader: 'eslint',
+      },
     ],
   },
   plugins: [
@@ -27,6 +31,5 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     }
-  },
-  watch: false
+  }
 }
