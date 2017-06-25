@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-let header = new Vue({
+new Vue({
   el: '.header',
   data: {
     sitename: 'PressLess',
@@ -8,20 +8,20 @@ let header = new Vue({
     menu: [
       {
         label: 'Home',
-        link: '#'
+        link: '#',
       },
       {
         label: 'Blog',
-        link: '#'
+        link: '#',
       },
       {
         label: 'About',
-        link: '#'
+        link: '#',
       },
       {
         label: 'Contact',
-        link: '#'
-      }
+        link: '#',
+      },
     ],
   },
   methods: {
@@ -31,6 +31,6 @@ let header = new Vue({
       } else {
         this.isOpen = true;
       }
-    }
-  }
+    },
+  },
 });
