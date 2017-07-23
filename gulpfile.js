@@ -8,9 +8,11 @@ const sassGlob      = require('gulp-sass-glob');
 const scssLint      = require('gulp-scss-lint');
 const webpack       = require('webpack-stream');
 
+const publicDir     = './public/';
 const scriptsDir    = './assets/scripts/';
 const stylesDir     = './assets/styles/';
-const publicDir     = './public/';
+const scripts       = [scriptsDir + '**/*.js', scriptsDir + '**/*.vue'];
+const styles        = stylesDir + '**/*.scss';
 
 const webpackConfig = require('./webpack.config.js');
 
@@ -19,7 +21,7 @@ function webpackError() {
 }
 
 gulp.task('js', () => {
-  gulp.src(scriptsDir + 'main.js')
+  gulp.src(scripts)
     .pipe(webpack(webpackConfig))
     .on('error', webpackError)
     .pipe(gulp.dest(publicDir))
@@ -27,7 +29,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('scssLint', () => {
-  gulp.src(stylesDir + '**/*.scss')
+  gulp.src(styles)
     .pipe(scssLint({
       'config': 'config/scss-lint.yml'
     }));
@@ -53,7 +55,7 @@ gulp.task('default', ['sass'], () => {
     server: publicDir,
   });
 
-  gulp.watch(scriptsDir + '**/*.js', ['js']);
-  gulp.watch(stylesDir + '**/*.scss', ['scssLint', 'sass']);
+  gulp.watch(scripts, ['js']);
+  gulp.watch(styles, ['scssLint', 'sass']);
   gulp.watch(publicDir + '**/*.html', ['reload']);
 });
