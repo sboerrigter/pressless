@@ -18,6 +18,10 @@ module.exports = {
         test: /\.js$/,
         loader: 'eslint',
       },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
     ],
   },
   plugins: [
