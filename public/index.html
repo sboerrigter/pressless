@@ -13,118 +13,105 @@
   </head>
 
   <body>
-    <header class="header container" :class="{ 'open': isOpen }">
-      <div class="wrapper">
-        <a class="logo" href="#">{{ sitename }}</a>
+    <div id="app">
+      <navigation></navigation>
 
-        <div class="hamburger" @click="toggleMenu">
-          <div class="hamburger__line"></div>
-          <div class="hamburger__line"></div>
-          <div class="hamburger__line"></div>
-          <div class="hamburger__line"></div>
+      <main class="main container">
+        <div class="wrapper">
+          <section class="intro">
+            <h1 class="intro__title">WordPress theme. Without WordPress.</h1>
+
+            <p class="intro__content">PressLess is a WordPress theme without WordPress. It uses Vue.js to load posts and pages via the WordPress REST API. When the theme is finished you can find the latest posts below or view some pages via the menu at the top of this page.</p>
+
+            <p>
+              <a class="intro__link button large" href="#">Read more</a>
+            </p>
+          </section>
+
+          <section class="posts">
+            <article class="post">
+              <img class="post__image" src="images/1.jpg">
+
+              <h2 class="post__title">This is an example post</h2>
+
+              <p class="post__excerpt">Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+              <p>
+
+                <a class="post__link button" href="#">Read more
+                </p></a>
+            </article>
+
+            <article class="post">
+              <img class="post__image" src="images/2.jpg">
+
+              <h2 class="post__title">This is an example post</h2>
+
+              <p class="post__excerpt">Fusce dapibus, tellus ac curDonec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
+
+              <p>
+                <a class="post__link button" href="#">Read more</a>
+              </p>
+            </article>
+
+            <article class="post">
+              <img class="post__image" src="images/3.jpg">
+
+              <h2 class="post__title">This is an example post</h2>
+
+              <p class="post__excerpt">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
+
+              <p>
+                <a class="post__link button" href="#">Read more</a>
+              </p>
+            </article>
+
+            <article class="post">
+              <img class="post__image" src="images/4.jpg">
+
+              <h2 class="post__title">This is an example post</h2>
+
+              <p class="post__excerpt">Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
+
+              <p>
+                <a class="post__link button" href="#">Read more</a>
+              </p>
+            </article>
+
+            <article class="post">
+              <img class="post__image" src="images/5.jpg">
+
+              <h2 class="post__title">This is an example post</h2>
+
+              <p class="post__excerpt">Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. </p>
+
+              <p>
+                <a class="post__link button" href="#">Read more</a>
+              </p>
+            </article>
+
+            <article class="post">
+              <img class="post__image" src="images/6.jpg">
+
+              <h2 class="post__title">This is an example post</h2>
+
+              <p class="post__excerpt">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
+
+              <p>
+                <a class="post__link button" href="#">Read more</a>
+              </p>
+            </article>
+          </section>
         </div>
+      </main>
 
-        <nav class="menu">
-          <a class="menu__item" :href="item.link" v-for="item in menu">{{ item.label }}</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="main container">
-      <div class="wrapper">
-        <section class="intro">
-          <h1 class="intro__title">WordPress theme. Without WordPress.</h1>
-
-          <p class="intro__content">PressLess is a WordPress theme without WordPress. It uses Vue.js to load posts and pages via the WordPress REST API. When the theme is finished you can find the latest posts below or view some pages via the menu at the top of this page.</p>
-
-          <p>
-            <a class="intro__link button large" href="#">Read more</a>
-          </p>
-        </section>
-
-        <section class="posts">
-          <article class="post">
-            <img class="post__image" src="images/1.jpg">
-
-            <h2 class="post__title">This is an example post</h2>
-
-            <p class="post__excerpt">Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-            <p>
-
-              <a class="post__link button" href="#">Read more
-              </p></a>
-          </article>
-
-          <article class="post">
-            <img class="post__image" src="images/2.jpg">
-
-            <h2 class="post__title">This is an example post</h2>
-
-            <p class="post__excerpt">Fusce dapibus, tellus ac curDonec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
-
-            <p>
-              <a class="post__link button" href="#">Read more</a>
-            </p>
-          </article>
-
-          <article class="post">
-            <img class="post__image" src="images/3.jpg">
-
-            <h2 class="post__title">This is an example post</h2>
-
-            <p class="post__excerpt">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
-
-            <p>
-              <a class="post__link button" href="#">Read more</a>
-            </p>
-          </article>
-
-          <article class="post">
-            <img class="post__image" src="images/4.jpg">
-
-            <h2 class="post__title">This is an example post</h2>
-
-            <p class="post__excerpt">Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
-
-            <p>
-              <a class="post__link button" href="#">Read more</a>
-            </p>
-          </article>
-
-          <article class="post">
-            <img class="post__image" src="images/5.jpg">
-
-            <h2 class="post__title">This is an example post</h2>
-
-            <p class="post__excerpt">Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. </p>
-
-            <p>
-              <a class="post__link button" href="#">Read more</a>
-            </p>
-          </article>
-
-          <article class="post">
-            <img class="post__image" src="images/6.jpg">
-
-            <h2 class="post__title">This is an example post</h2>
-
-            <p class="post__excerpt">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
-
-            <p>
-              <a class="post__link button" href="#">Read more</a>
-            </p>
-          </article>
-        </section>
-      </div>
-    </main>
-
-    <footer class="footer container">
-      <div class="wrapper">
-        <section class="credits">
-          <p>PressLess is made by <a href="https://github.com/sboerrigter" target="_blank">Sjoerd Boerrigter</a>, to become a better webdeveloper.</p>
-        </section>
-    </footer>
+      <footer class="footer container">
+        <div class="wrapper">
+          <section class="credits">
+            <p>PressLess is made by <a href="https://github.com/sboerrigter" target="_blank">Sjoerd Boerrigter</a>, to become a better webdeveloper.</p>
+          </section>
+      </footer>
+    </div>
 
     <script src="script.js" async></script>
   </body>
