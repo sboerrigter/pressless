@@ -27,6 +27,7 @@
     "postinstall": "gulp"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "vue": "^2.3.4"
   }
 }
