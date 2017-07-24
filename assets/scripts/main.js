@@ -66,6 +66,49 @@ Vue.component('navigation-item', {
   `,
 });
 
+Vue.component('posts', {
+  template: `
+  <section class="posts">
+    <article class="post" v-for="post in posts" >
+      <img class="post__image" :src="post.image">
+
+      <h2 class="post__title">{{ post.title }}</h2>
+
+      <p class="post__excerpt">{{ post.excerpt }}</p>
+
+      <p>
+        <a class="post__link button" :href="post.link">Read more</a>
+      </p>
+    </article>
+  </section>
+  `,
+
+  data() {
+    return {
+      posts: [
+        {
+          title: 'This is an example post',
+          excerpt: 'Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+          image: 'images/1.jpg',
+          link: '#',
+        },
+        {
+          title: 'This is an example post',
+          excerpt: 'Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+          image: 'images/2.jpg',
+          link: '#',
+        },
+        {
+          title: 'This is an example post',
+          excerpt: 'Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+          image: 'images/3.jpg',
+          link: '#',
+        },
+      ],
+    };
+  },
+});
+
 const app = new Vue({
   el: '#app',
 });
