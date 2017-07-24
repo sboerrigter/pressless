@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import api from './api';
 
 Vue.component('navigation', {
   template: `
@@ -74,38 +75,24 @@ Vue.component('posts', {
 
       <h2 class="post__title">{{ post.title }}</h2>
 
-      <p class="post__excerpt">{{ post.excerpt }}</p>
+      <p class="post__description">{{ post.description }}</p>
 
       <p>
-        <a class="post__link button" :href="post.link">Read more</a>
+        <a class="post__link button" :href="post.link" target="_blank">Read more</a>
       </p>
     </article>
   </section>
   `,
 
   data() {
-    return {
-      posts: [
-        {
-          title: 'This is an example post',
-          excerpt: 'Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
-          image: 'images/1.jpg',
-          link: '#',
-        },
-        {
-          title: 'This is an example post',
-          excerpt: 'Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
-          image: 'images/2.jpg',
-          link: '#',
-        },
-        {
-          title: 'This is an example post',
-          excerpt: 'Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
-          image: 'images/3.jpg',
-          link: '#',
-        },
-      ],
-    };
+    return { posts: false };
+  },
+
+  mounted() {
+    api.getPosts()
+      .then((posts) => {
+        this.posts = posts;
+      });
   },
 });
 
