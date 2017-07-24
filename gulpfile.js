@@ -21,7 +21,7 @@ function webpackError() {
 }
 
 gulp.task('js', () => {
-  gulp.src(scripts)
+  gulp.src(scriptsDir + 'main.js')
     .pipe(webpack(webpackConfig))
     .on('error', webpackError)
     .pipe(gulp.dest(publicDir))
