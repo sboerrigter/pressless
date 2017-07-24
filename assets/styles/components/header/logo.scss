@@ -12,8 +12,16 @@
   .open & {
     color: $white;
 
+    @include breakpoint('large') {
+      color: $heading-color;
+    }
+
     &:hover {
       color: $green-light;
+
+      @include breakpoint('large') {
+        color: $primary-hover;
+      }
     }
   }
 }

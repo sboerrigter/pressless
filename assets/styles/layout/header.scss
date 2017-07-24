@@ -11,5 +11,9 @@
 
   &.open {
     background: $menu-background;
+
+    @include breakpoint('large') {
+      background: $body-background;
+    }
   }
 }
